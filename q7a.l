@@ -34,7 +34,7 @@
 <F>a BEGIN D;
 <F>b BEGIN F;
 <F>\n BEGIN F; printf("ACCEPTED\n");
-<F>[^ab] BEGIN F; printf("ACCEPTED\n");
+<F>[^ab] BEGIN F; printf("NOT ACCEPTED\n");
 
 %%
 

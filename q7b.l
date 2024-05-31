@@ -35,7 +35,7 @@
 <F>a BEGIN D;
 <F>b BEGIN F;
 <F>\n BEGIN F; fprintf(output, "ACCEPTED\n");
-<F>[^ab] BEGIN F; fprintf(output, "ACCEPTED\n");
+<F>[^ab] BEGIN F; fprintf(output, "NOT ACCEPTED\n");
 
 %%
 
