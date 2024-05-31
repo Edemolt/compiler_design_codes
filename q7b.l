@@ -14,28 +14,28 @@
 
 <B>a BEGIN B;
 <B>b BEGIN C;
-<B>\n BEGIN B; fprintf(output, "NOT ACCEPTED\n");
-<B>[^ab] BEGIN B; fprintf(output, "NOT ACCEPTED\n");
+<B>\n BEGIN INITIAL; fprintf(output, "NOT ACCEPTED\n");
+<B>[^ab] BEGIN INITIAL; fprintf(output, "NOT ACCEPTED\n");
 
 <C>a BEGIN D;
 <C>b BEGIN INITIAL;
-<C>\n BEGIN D; fprintf(output, "NOT ACCEPTED\n");
-<C>[^ab] BEGIN C; fprintf(output, "NOT ACCEPTED\n");
+<C>\n BEGIN INITIAL; fprintf(output, "NOT ACCEPTED\n");
+<C>[^ab] BEGIN INITIAL; fprintf(output, "NOT ACCEPTED\n");
 
 <D>a BEGIN D;
 <D>b BEGIN E;
-<D>\n BEGIN D; fprintf(output, "NOT ACCEPTED\n");
-<D>[^ab] BEGIN E; fprintf(output, "NOT ACCEPTED\n");
+<D>\n BEGIN INITIAL; fprintf(output, "NOT ACCEPTED\n");
+<D>[^ab] BEGIN INITIAL; fprintf(output, "NOT ACCEPTED\n");
 
 <E>a BEGIN D;
 <E>b BEGIN F;
-<E>\n BEGIN E; fprintf(output, "NOT ACCEPTED\n");
-<E>[^ab] BEGIN E; fprintf(output, "NOT ACCEPTED\n");
+<E>\n BEGIN INITIAL; fprintf(output, "NOT ACCEPTED\n");
+<E>[^ab] BEGIN INITIAL; fprintf(output, "NOT ACCEPTED\n");
 
 <F>a BEGIN D;
 <F>b BEGIN F;
-<F>\n BEGIN F; fprintf(output, "ACCEPTED\n");
-<F>[^ab] BEGIN F; fprintf(output, "NOT ACCEPTED\n");
+<F>\n BEGIN INITIAL; fprintf(output, "ACCEPTED\n");
+<F>[^ab] BEGIN INITIAL; fprintf(output, "NOT ACCEPTED\n");
 
 %%
 

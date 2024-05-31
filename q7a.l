@@ -13,28 +13,28 @@
 
 <B>a BEGIN B;
 <B>b BEGIN C;
-<B>\n BEGIN B; printf("NOT ACCEPTED\n");
-<B>[^ab] BEGIN B; printf("NOT ACCEPTED\n");
+<B>\n BEGIN INITIAL; printf("NOT ACCEPTED\n");
+<B>[^ab] BEGIN INITIAL; printf("NOT ACCEPTED\n");
 
 <C>a BEGIN D;
 <C>b BEGIN INITIAL;
-<C>\n BEGIN D; printf("NOT ACCEPTED\n");
-<C>[^ab] BEGIN C; printf("NOT ACCEPTED\n");
+<C>\n BEGIN INITIAL; printf("NOT ACCEPTED\n");
+<C>[^ab] BEGIN INITIAL; printf("NOT ACCEPTED\n");
 
 <D>a BEGIN D;
 <D>b BEGIN E;
-<D>\n BEGIN D; printf("NOT ACCEPTED\n");
-<D>[^ab] BEGIN E; printf("NOT ACCEPTED\n");
+<D>\n BEGIN INITIAL; printf("NOT ACCEPTED\n");
+<D>[^ab] BEGIN INITIAL; printf("NOT ACCEPTED\n");
 
 <E>a BEGIN D;
 <E>b BEGIN F;
-<E>\n BEGIN E; printf("NOT ACCEPTED\n");
-<E>[^ab] BEGIN E; printf("NOT ACCEPTED\n");
+<E>\n BEGIN INITIAL; printf("NOT ACCEPTED\n");
+<E>[^ab] BEGIN INITIAL; printf("NOT ACCEPTED\n");
 
 <F>a BEGIN D;
 <F>b BEGIN F;
-<F>\n BEGIN F; printf("ACCEPTED\n");
-<F>[^ab] BEGIN F; printf("NOT ACCEPTED\n");
+<F>\n BEGIN INITIAL; printf("ACCEPTED\n");
+<F>[^ab] BEGIN INITIAL; printf("NOT ACCEPTED\n");
 
 %%
 
